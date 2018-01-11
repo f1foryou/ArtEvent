@@ -25,6 +25,22 @@
 .navbar-center{
 	width: 40% !important
 }
+.nav.nav-pills{
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	box-shadow: 1px 0px 0px 1px rgba(34,36,38,.15);
+}
+.nav.nav-pills > li{
+	border-right: 1px solid #d5d5d5ad;	
+}
+.nav-pills>li>a {
+	color: #070707;
+	border-radius: 0px;
+}
+.nav-pills>li.active>a {
+	color: #070707 !important;
+	background-color: #bcbcbc69 !important;
+}
 @media (max-width: 736px) {
 	.navbar-center{
 		width: 100% !important
