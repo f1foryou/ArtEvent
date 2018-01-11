@@ -27,7 +27,6 @@
 }
 @media (max-width: 736px) {
 	.navbar-center{
-		padding-top: 10px !important;
 		width: 100% !important
 	}
 	.navbar-header{
