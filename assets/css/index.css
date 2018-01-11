@@ -14,7 +14,10 @@
 .navbar-fixed-top{
 	position: fixed !important;
 	width: 100% !important;
-	z-index: 1 !important;
+	z-index: 9 !important;
+}
+.carousel-indicators{
+	z-index: 8 !important;
 }
 main{
 	padding-top: 4% !important;
