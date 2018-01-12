@@ -35,8 +35,8 @@ define(['jquery','angular','angular-route','bootstrap','app'],
 			$routeProvider.when('/view2', {
 				templateUrl: 'pages/image.html',
 			});
-			$routeProvider.otherwise({
-				redirectTo: 'index.html'
+			$routeProvider.when('/',{
+				templateUrl: 'pages/main.html',
 			});
     }]);
 
