@@ -21,7 +21,7 @@ require.config({
 		}
 	},
 });
-define(['jquery','angular','angular-route','bootstrap','app'],
+define(['jquery','angular','angular-route','bootstrap','app','../controllers/eventsCntrl','../controllers/eventCntrl'],
 	function ($, ng,ngroute,bootstrap,app) {
 		$(document).ready(
 			function (document) {
@@ -29,11 +29,13 @@ define(['jquery','angular','angular-route','bootstrap','app'],
 		});
 
 		return app.config(['$routeProvider', function ($routeProvider) {
-			$routeProvider.when('/event', {
-				templateUrl: 'pages/event.html',
+			$routeProvider.when('/events', {
+				templateUrl: 'pages/events.html',
+				controller : "eventsCntrl"
 			});
-			$routeProvider.when('/view2', {
-				templateUrl: 'pages/image.html',
+			$routeProvider.when('/event/:id', {
+				templateUrl: 'pages/event.html',
+				controller : "eventCntrl"
 			});
 			$routeProvider.when('/',{
 				templateUrl: 'pages/main.html',
