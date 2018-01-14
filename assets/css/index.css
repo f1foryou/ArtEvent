@@ -44,7 +44,7 @@
 .wrapper{
 	padding-top: 5.5% !important;
 }
-@media (max-width: 736px) {
+@media (max-width: 767px) {
 	.navbar-center{
 		width: 100% !important
 	}
@@ -59,6 +59,6 @@
 		padding-top: 10px;
 	}
 	.wrapper{
-		padding-top:25% !important;
+		padding-top:35% !important;
 	}
 }

@@ -21,17 +21,21 @@ require.config({
 		}
 	},
 });
-define(['jquery','angular','angular-route','bootstrap','app','../controllers/eventsCntrl','../controllers/eventCntrl'],
+define(['jquery','angular','angular-route','bootstrap','app',],
 	function ($, ng,ngroute,bootstrap,app) {
 		$(document).ready(
 			function (document) {
 				ng.bootstrap(document, ['app']);
 		});
 
-		return app.config(['$routeProvider', function ($routeProvider) {
+		return app.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
 			$routeProvider.when('/events', {
 				templateUrl: 'pages/events.html',
 				controller : "eventsCntrl"
+			});
+			$routeProvider.when('/profile', {
+				templateUrl: 'pages/profile.html',
+				controller : "profileCntrl"
 			});
 			$routeProvider.when('/event/:id', {
 				templateUrl: 'pages/event.html',
@@ -39,6 +43,7 @@ define(['jquery','angular','angular-route','bootstrap','app','../controllers/eve
 			});
 			$routeProvider.when('/',{
 				templateUrl: 'pages/main.html',
+				controller : "mainCntrl"
 			});
     }]);
 
