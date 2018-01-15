@@ -8,7 +8,8 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-3" ng-repeat="event in events">
-				<a class="card" ng-href="#!/event/{{event.id}}">
+<!--				<a class="card" ng-href="#!/event/{{event.id}}"> -->
+					<a class="card">
 					<div class="img-card">
 						<img ng-src="{{event.img}}" />
 					</div>
@@ -21,7 +22,7 @@
 						</p>
 					</div>
 					<div class="card-read-more">
-						<div class="btn btn-link btn-block">
+						<div class="btn btn-link btn-block" ng-click="event.sayHello(event,$event)">
 							Read More
 						</div>
 					</div>
