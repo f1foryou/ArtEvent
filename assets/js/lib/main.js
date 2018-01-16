@@ -37,6 +37,10 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 				templateUrl: 'pages/profile.html',
 				controller : "profileCntrl"
 			});
+			$routeProvider.when('/gallery',{
+				templateUrl: 'pages/gallery.html',
+				controller : "galleryCntrl"
+			});
 			$routeProvider.when('/event/:id', {
 				templateUrl: 'pages/event.html',
 				controller : "eventCntrl"

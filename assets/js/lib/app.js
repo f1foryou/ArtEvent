@@ -4,6 +4,7 @@ define([
 	'../controllers/mainCntrl',
 	'../controllers/eventsCntrl',
 	'../controllers/eventCntrl',
+	'../controllers/galleryCntrl',
 	'../controllers/profileCntrl',
 ], function (angular) {
 
