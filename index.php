@@ -19,6 +19,7 @@
 		<link href="assets/css/cards.css" rel="stylesheet">
 		<link href="assets/css/index.css" rel="stylesheet">
 		<link href="assets/css/plans.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 		<style type="text/css">
 			.container{
 				width: 100% !important;
@@ -29,7 +30,7 @@
 		<!-- NAVBAR START -->
 		<?php 
 			include 'includes/navbar.php';
-		?>		
+		?>
 		<!-- NAVBAR END -->
 		<section class="wrapper" data-ng-view>
 		</section>

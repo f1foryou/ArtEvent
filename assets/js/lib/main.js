@@ -41,10 +41,18 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 				templateUrl: 'pages/event.html',
 				controller : "eventCntrl"
 			});
+			$routeProvider.when('/login',{
+				templateUrl: 'pages/login.html',
+				controller: "loginCntrl"
+			});
+			$routeProvider.when('/register',{
+				templateUrl: 'pages/register.html',
+			});
 			$routeProvider.when('/',{
 				templateUrl: 'pages/main.html',
 				controller : "mainCntrl"
 			});
+
     }]);
 
 	}

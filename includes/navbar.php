@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="#!/">
 				<img src="assets/images/logo.png">
 				Project name
 			</a>
@@ -31,7 +31,7 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#!/events">Events</a></li>
-				<li><a href="">Login</a></li>
+				<li><a href="#!/login">Login</a></li>
 				<li><a href="#!/profile">Profile</a></li>
 			</ul>
 		</div>
