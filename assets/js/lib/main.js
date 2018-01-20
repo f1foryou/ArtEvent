@@ -30,26 +30,30 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 
 		return app.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
 			$routeProvider.when('/events', {
-				templateUrl: 'pages/events.html',
+				templateUrl: 'views/events.html',
 				controller : "eventsCntrl"
 			});
 			$routeProvider.when('/profile', {
-				templateUrl: 'pages/profile.html',
+				templateUrl: 'views/profile.html',
 				controller : "profileCntrl"
 			});
 			$routeProvider.when('/event/:id', {
-				templateUrl: 'pages/event.html',
+				templateUrl: 'views/event.html',
 				controller : "eventCntrl"
 			});
 			$routeProvider.when('/login',{
-				templateUrl: 'pages/login.html',
+				templateUrl: 'views/login.html',
 				controller: "loginCntrl"
 			});
 			$routeProvider.when('/register',{
-				templateUrl: 'pages/register.html',
+				templateUrl: 'views/register.html',
 			});
-			$routeProvider.when('/',{
-				templateUrl: 'pages/main.html',
+			$routeProvider.when('/:section',{
+				templateUrl: 'views/main.html',
+				controller : "mainCntrl"
+			});
+			$routeProvider.otherwise({
+				templateUrl: 'views/main.html',
 				controller : "mainCntrl"
 			});
 

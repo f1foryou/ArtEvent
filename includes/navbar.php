@@ -19,7 +19,7 @@
 						<input class="form-control" placeholder="Search" list="search_bar" name="search_bar">
 						<datalist id="search_bar">
 							<option value="1">Asd</option>
-							<option>
+							<option></option>
 						</datalist>
 						<div class="input-group-btn">
 							<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -33,6 +33,7 @@
 				<li><a href="#!/events">Events</a></li>
 				<li><a href="#!/login">Login</a></li>
 				<li><a href="#!/profile">Profile</a></li>
+				<li><a ng-href="#!/plans">Post Event</a></li>
 			</ul>
 		</div>
 	</div>
