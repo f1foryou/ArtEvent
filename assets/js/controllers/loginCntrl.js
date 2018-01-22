@@ -1,7 +1,7 @@
 define(['./module'], function (controllers) {
 	controllers.controller('loginCntrl', ['$scope','$http', function ($scope,$http) {
 
-		$scope.uname=null;
+		$scope.umail=null;
 		$scope.upass=null;
 		$scope.loginDetails = function(data,event) {
 			alert('Hello  !'+$scope.uname);
@@ -9,8 +9,9 @@ define(['./module'], function (controllers) {
 				method : "GET",
 				url : "controllers/usercontroller.php",
 				params:{
-					uname:'asd',
+					umail:'asd',
 					upass:'asd',
+					act:'login',
 				}
 			}).then(function mySuccess(response) {
 				$scope.myWelcome = response.data;
