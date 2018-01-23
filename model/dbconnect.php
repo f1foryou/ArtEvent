@@ -4,7 +4,7 @@ class dbconnect{
 		$host = 'localhost';
 		$user = 'root';
 		$pass = '';
-		$db = 'demo';
+		$db = 'contest';
 		$connection = mysqli_connect($host,$user,$pass,$db); 
 		return $connection;
 	}

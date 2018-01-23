@@ -18,5 +18,16 @@
 			$instance->password = $password;
 			return $instance;
 		}
+
+		public function resultConstruct($id,$name,$email,$isActive,$createdDate,$lastModifiedDate){
+			$instance = new self();
+			$instance->id = $id;
+			$instance->name = $name;
+			$instance->email = $email;
+			$instance->isActive = $isActive;
+			$instance->createdDate = $createdDate;
+			$instance->lastModifiedDate=$lastModifiedDate;
+			return $instance;
+		}
 	}
 ?>

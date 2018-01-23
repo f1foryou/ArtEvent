@@ -2,8 +2,7 @@
 	require_once '../model/userdto.php';
 	require_once '../model/userdao.php';
 
-	if(isset($_GET['act'])){
-		$result;
+	if((isset($_GET['act']))&&($_GET['act']=="login")){
 		$email = $_GET['umail'];
 		$pass = $_GET['upass'];
 

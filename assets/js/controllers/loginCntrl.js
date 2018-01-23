@@ -9,8 +9,8 @@ define(['./module'], function (controllers) {
 				method : "GET",
 				url : "controllers/usercontroller.php",
 				params:{
-					umail:'asd',
-					upass:'asd',
+					umail:$scope.umail,
+					upass:$scope.upass,
 					act:'login',
 				}
 			}).then(function mySuccess(response) {
