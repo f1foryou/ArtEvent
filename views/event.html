@@ -1,26 +1,83 @@
+<link href="assets/css/event.css" rel="stylesheet">
 <div class="content">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12">
-				<!--Card content-->
-				<div class="card">
-					<div class="card-body text-center">
-						<br><br>
-						<!--Title-->
-						<h4 class="card-title">{{id}}<br><strong>Name</strong></h4>
-						<h5 class="indigo-text"><strong>Photography</strong></h5>
-						<p class="card-text">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-						</p>
-						<!--Linkedin-->
-						<a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
-						<!--Twitter-->
-						<a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
-						<!--Dribbble-->
-						<a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+	<div class="container nopadding">
+		<div class="row nopadding">
+			<div class="col-lg-12 col-sm-12 nopadding">
+					<div class="fb-profile">
+						<img align="left" class="fb-image-lg" src="assets/images/1000x400.png" alt="Profile image example"/>
+					</div>
+			</div>
+			<div class="col-lg-12 col-sm-12">
+				<div class="segment well">
+					<div class="row">
+						<div class="col-sm-4">
+							<h4><strong>Event Name</strong></h4>
+							<h5>Host By:<strong>ASD</strong></h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Start Date:<strong>10/Sep/18</strong></h4>
+							<h4>End Date: <strong>9/Oct/18</strong></h4>							
+						</div>
+						<div class="col-sm-4">
+							<h4>Status: <strong>Live</strong></h4>
+						</div>
 					</div>
 				</div>
-				<!--/.Card content-->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- Nav tabs -->
+				<div class="event_details">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#details" aria-controls="details" role="tab" data-toggle="tab">About Event</a>
+						</li>
+						<li role="presentation">
+							<a href="#prizes" aria-controls="prizes" role="tab" data-toggle="tab">Prizes</a>
+						</li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="details">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+						<div role="tabpanel" class="tab-pane" id="prizes">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-12 event_details" style="padding: 20px;">
+						<button href="#" class="btn btn-block btn-success">
+							<strong>Participate</strong>
+						</button>
+						<br><br>
+						<button class="btn btn-block btn-primary">
+							<strong>Gallery</strong>
+						</button>
+						<br><br>
+						<button class="btn btn-block btn-warning">
+							<strong>Leader Board</strong>
+						</button>
+						<br><br>
+						<div class="cont">
+							Event ending date : <strong>09/OCT/2018</strong>
+						</div>
+					</div>
+					<div class="col-sm-12 event_details">
+						<div class="card-content">
+							<h5 class="card-title">
+								Skils Required
+							</h5>
+						</div>
+						<div class="card-read-more" style="padding: 10px;">
+							<span class="label label-warning">Warning</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

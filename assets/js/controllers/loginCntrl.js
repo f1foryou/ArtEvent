@@ -4,7 +4,6 @@ define(['./module'], function (controllers) {
 		$scope.umail=null;
 		$scope.upass=null;
 		$scope.loginDetails = function(data,event) {
-			alert('Hello  !'+$scope.uname);
 			$http({
 				method : "GET",
 				url : "controllers/usercontroller.php",

@@ -48,6 +48,10 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 			$routeProvider.when('/register',{
 				templateUrl: 'views/register.html',
 			});
+			$routeProvider.when('/gallery',{
+				templateUrl: 'views/gallery.html',
+				controller : "galleryCntrl"
+			});
 			$routeProvider.when('/:section',{
 				templateUrl: 'views/main.html',
 				controller : "mainCntrl"
