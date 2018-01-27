@@ -109,6 +109,18 @@ CREATE TABLE IF NOT EXISTS `contest`.`event_types` (
   PRIMARY KEY (`event_types_id`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `contest`.`plans`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `contest`.`plans` (
+  `plans_id` INT NOT NULL,
+  `plans_name` VARCHAR(50) NOT NULL,
+  `plans_price` INT NOT NULL,
+  `participants_count` INT NOT NULL,
+  `plans_json` JSON NOT NULL,
+  `plans_promoted` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`plans_id`))
+ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `contest`.`events`
@@ -123,9 +135,12 @@ CREATE TABLE IF NOT EXISTS `contest`.`events` (
   `events_participants` INT NOT NULL,
   `created_date` TIMESTAMP(30) NOT NULL,
   `last_mod_date` TIMESTAMP(30) NOT NULL,
+  `plans_id` INT NOT NULL,
+  `events_cover` MEDIUMTEXT NULL,
   PRIMARY KEY (`events_id`),
   INDEX `fk_conducted_by_idx` (`conducted_by` ASC),
   INDEX `fk_events_type_id_idx` (`event_types_id` ASC),
+  INDEX `fk_events_plans_id_idx` (`plans_id` ASC),
   CONSTRAINT `fk_conducted_by`
     FOREIGN KEY (`conducted_by`)
     REFERENCES `contest`.`users` (`users_id`)
@@ -135,9 +150,13 @@ CREATE TABLE IF NOT EXISTS `contest`.`events` (
     FOREIGN KEY (`event_types_id`)
     REFERENCES `contest`.`event_types` (`event_types_id`)
     ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_events_plans_id`
+    FOREIGN KEY (`plans_id`)
+    REFERENCES `contest`.`plans` (`plans_id`)
+    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `contest`.`images`
@@ -334,4 +353,5 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 

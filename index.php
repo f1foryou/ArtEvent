@@ -19,6 +19,7 @@
 		<link href="assets/css/cards.css" rel="stylesheet">
 		<link href="assets/css/index.css" rel="stylesheet">
 		<link href="assets/css/plans.css" rel="stylesheet">
+		<link href="assets/css/gallery.css" rel="stylesheet">
 		<style type="text/css">
 			.container{
 				width: 100% !important;
@@ -42,3 +43,4 @@
 		<script src="assets/js/require.js" data-main="assets/js/lib/main.js"></script>
   </body>
 </html>
+
