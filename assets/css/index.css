@@ -84,6 +84,18 @@
 .single li:last-child a {
 	border-bottom: 0;
 }
+.row.vdivide [class*='col-']:not(:last-child):after {
+	background: #e0e0e0;
+	width: 1px;
+	content: "";
+	display:block;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	min-height: 70px;
+}
+
 @media (max-width: 767px) {
 	.navbar-center{
 		width: 100% !important
@@ -101,5 +113,8 @@
 	}
 	.wrapper{
 		padding-top:30% !important;
+	}
+	.row.vdivide [class*='col-']:not(:last-child):after {
+		content: none !important;
 	}
 }

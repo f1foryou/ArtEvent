@@ -1,6 +1,6 @@
 <link href="assets/css/profile.css" rel="stylesheet">
 <div class="container">
-	<div class="row profile">
+	<div class="row vdivide profile">
 		<div class="col-sm-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
@@ -13,25 +13,31 @@
 					<div class="profile-usertitle-name">
 						Marcus Doe
 					</div>
-					<div class="profile-usertitle-job">
-						Developer
+					<div class="profile-userbuttons">
+						<div class="row">
+							<div class="col-xs-6">
+								<h4>Ongoing</h4>
+								54
+							</div>
+							<div class="col-xs-6">
+								<h4>Participated</h4>
+								54
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
-				</div>
-				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
 					<ul class="nav" role="tablist">
 						<li role="presentation" class="active">
-							<a href="#details" aria-controls="details" role="tab" data-toggle="tab">About Event</a>
+							<a href="#ongoing" aria-controls="details" role="tab" data-toggle="tab">Ongoing Events</a>
 						</li>
 						<li role="presentation">
-							<a href="#prizes" aria-controls="prizes" role="tab" data-toggle="tab">Prizes</a>
+							<a href="#participated" aria-controls="prizes" role="tab" data-toggle="tab">Participated Events</a>
+						</li>
+						<li>
+							<a href="#!/events">All Events</a>
 						</li>
 					</ul>
 				</div>
@@ -41,11 +47,53 @@
 		<div class="col-sm-9">
 			<div class="profile-content">
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="details">
-						
+					<div role="tabpanel" class="tab-pane active" id="ongoing">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3" ng-repeat="event in ongoingEvents">
+								<a class="card" ng-href="#!/event/{{event.id}}">
+									<div class="img-card">
+										<img ng-src="{{event.img}}" />
+									</div>
+									<div class="card-content">
+										<h5 class="card-title">
+												{{event.name}}
+										</h5>
+										<p class="">
+											<strong>Ends On </strong> {{event.end_date}}
+										</p>
+									</div>
+									<div class="card-read-more">
+										<div class="btn btn-link btn-block">
+											Read More
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="prizes">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					<div role="tabpanel" class="tab-pane" id="participated">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3" ng-repeat="event in participatedEvents">
+								<a class="card" ng-href="#!/event/{{event.id}}">
+									<div class="img-card">
+										<img ng-src="{{event.img}}" />
+									</div>
+									<div class="card-content">
+										<h5 class="card-title">
+												{{event.name}}
+										</h5>
+										<p class="">
+											<strong>Ends On </strong> {{event.end_date}}
+										</p>
+									</div>
+									<div class="card-read-more">
+										<div class="btn btn-link btn-block">
+											Read More
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
