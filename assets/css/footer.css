@@ -117,6 +117,8 @@ footer{
 }
 
 .footer-distributed .footer-company-about{
+	width:70%;
+	text-align:justify;
 	line-height: 20px;
 	color:  #92999f;
 	font-size: 13px;
