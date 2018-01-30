@@ -36,5 +36,6 @@
 		</section>
 		<script src="assets/js/lib/jquery/jquery.js"></script>
 		<script src="assets/js/require.js" data-main="assets/js/lib/main.js"></script>
+		<script src="assets/js/common_utils.js"></script>
   </body>
 </html>
