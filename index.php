@@ -13,12 +13,16 @@
 		<meta name="author" content="">
 		<title>Art Event</title>
 
+		<link href="assets/css/footer.css" rel="stylesheet">
+		
+
 		<link href="assets/css/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="assets/css/carousel.css" rel="stylesheet">
 		<link href="assets/css/cards.css" rel="stylesheet">
 		<link href="assets/css/index.css" rel="stylesheet">
 		<link href="assets/css/plans.css" rel="stylesheet">
+
 		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 		<style type="text/css">
 			.container{
@@ -36,5 +40,8 @@
 		</section>
 		<script src="assets/js/lib/jquery/jquery.js"></script>
 		<script src="assets/js/require.js" data-main="assets/js/lib/main.js"></script>
-  </body>
+		
+
+
+		</body>
 </html>
