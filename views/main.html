@@ -213,16 +213,38 @@
 		</div>
 		<hr class="featurette-divider">		
 		<div class="row" id="plans">
+			<section id="bs-pricing-five" class="bs-pricing-five p-top-100 bg-white">
+				<div class="container">
+					<div class="row">
+						<div class="bs-five-area bs-radius">
+							<div class="col-md-3 no-padding" ng-repeat="price in pricingPlans">
+								<div class="bs-five">
+									<h6 class="text-uppercase">{{price.name}}</h6>
+									<h1 class="bs-caption"><sup>Rs.</sup>{{price.cost}}</h1>
+									<ul>
+										<li><b>{{price.features.participants}} Participants</b></li>
+										<li>{{price.features.support}} Customer Support</li>
+										<li>{{price.features.type}}</li>
+										<li>{{price.features.report}}</li>
+									</ul>
+									<a href="" class="btn btn-success btn-round m-top-40">Post Event</a>  
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
 		</div>
 	</div>
 </div>
 
-		<footer class="footer-distributed">
+<footer class="footer-distributed">
 
-			<div class="footer-left">
+	<div class="footer-left">
 
-				<h3>Company<span>logo</span></h3>
+		<h3>Company<span>logo</span></h3>
 
+<<<<<<< HEAD
 				<p class="footer-company-about">
 					<span>About the company</span>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
@@ -238,26 +260,41 @@
 				</div>
 
 			</div>
+=======
+		<p class="footer-links">
+			<a href="#">Home</a>
+			<br>
+			<a href="#">Products</a>
+			<br>
+			<a href="#">Pricing</a>
+			<br>
+			<a href="#">Contact</a>
+		</p>
 
-			<div class="footer-center">
+		<p class="footer-company-name">Company Name &copy; 2018</p>
+	</div>
+>>>>>>> 5f1635b9284acf2b70210c81ded3ef674eeae672
 
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>1234 Street Name</span> City AA 99999</p>
-				</div>
+	<div class="footer-center">
 
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+91 9876 5432 10</p>
-				</div>
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>1234 Street Name</span> City AA 99999</p>
+		</div>
 
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:info@LaNterNiTe.com">info@LaNterNiTe.com</a></p>
-				</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+91 9876 5432 10</p>
+		</div>
 
-			</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:info@LaNterNiTe.com">info@LaNterNiTe.com</a></p>
+		</div>
 
+	</div>
+
+<<<<<<< HEAD
 			<div class="footer-right">
 				<u><span>Site map</span></u>
 				<p class="footer-links">
@@ -271,7 +308,24 @@
 				</p>
 
 				<br><br><p class="footer-company-name">Company Name &copy; 2018</p>
+=======
+	<div class="footer-right">
 
-			</div>
+		<p class="footer-company-about">
+			<span>About the company</span>
+			Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+		</p>
 
-		</footer>
+		<div class="footer-icons">
+
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+			<a href="#"><i class="fa fa-github"></i></a>
+
+		</div>
+>>>>>>> 5f1635b9284acf2b70210c81ded3ef674eeae672
+
+	</div>
+
+</footer>
