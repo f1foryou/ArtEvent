@@ -1,4 +1,5 @@
-<?php 
+<?php
+	require_once('include_dao.php');
 	include 'includes/config.php';
 ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
 	</head>
 	<body>
 		<!-- NAVBAR START -->
-		<?php 
+		<?php
 			include 'includes/navbar.php';
 		?>
 		<!-- NAVBAR END -->

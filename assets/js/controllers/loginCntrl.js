@@ -18,7 +18,7 @@ define(['./module'], function (controllers) {
 				$scope.myWelcome = response.data;
 			});
 		};
-		
+
 		return $scope;
 	}]);
 });

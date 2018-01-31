@@ -1,6 +1,6 @@
 <?php
-	class userDTO{
-		
+	class userDTO {
+
 		public $id;
 		public $name;
 		public $email;
