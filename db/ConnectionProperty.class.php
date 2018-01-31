@@ -3,7 +3,7 @@
 class ConnectionProperty {
 	private static $host = 'localhost';
 	private static $user = 'root';
-	private static $password = 'root';
+	private static $password = '';
 	private static $database = 'contest';
 
 	public static function getHost(){

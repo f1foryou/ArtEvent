@@ -1,6 +1,7 @@
 <?php
-require_once('Connection.php');
-require_once('ArrayList.php');
+
+require_once('Connection.class.php');
+require_once('ArrayList.class.php');
 
 class Transaction{
 	private static $transactions;

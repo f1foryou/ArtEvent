@@ -1,7 +1,7 @@
 <?php
 
-require_once('Connection.php');
-require_once('Transaction.php');
+require_once('Transaction.class.php');
+require_once('Connection.class.php');
 
 class SqlQuery{
 	var $txt;

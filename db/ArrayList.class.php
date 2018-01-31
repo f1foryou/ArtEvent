@@ -1,10 +1,5 @@
 <?php
-/**
- * ArrayList
- *
- * @author: Tomasz Jazwinski
- * @date: 2007-11-28
- */
+
 class ArrayList{
 	private $tab;
 	private $size;

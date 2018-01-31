@@ -1,11 +1,9 @@
 <?php
-
-require_once('QueryExecutor.php');
-require_once('SqlQuery.php');
-require_once('BaseDAOImpl.php');
-require_once('UserDAO.php');
-require_once('UserDTO.php');
-
+require_once('BaseDAOImpl.class.php');
+require_once('../dao/UserDAO.class.php');
+require_once('../db/SqlQuery.class.php');
+require_once('../db/QueryExecutor.class.php');
+require_once('../dto/UserDTO.class.php');
 /**
  *
  */

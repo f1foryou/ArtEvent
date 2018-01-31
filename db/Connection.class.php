@@ -1,6 +1,6 @@
 <?php
 
-require_once('ConnectionFactory.php');
+require_once('ConnectionFactory.class.php');
 
 class Connection{
 

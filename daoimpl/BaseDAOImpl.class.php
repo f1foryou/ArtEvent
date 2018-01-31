@@ -1,8 +1,7 @@
 <?php
-
-require_once('SqlQuery.php');
-require_once('BaseDAO.php');
-require_once('QueryExecutor.php');
+require_once('../dao/BaseDAO.class.php');
+require_once('../db/SqlQuery.class.php');
+require_once('../db/QueryExecutor.class.php');
 /**
  *
  */
@@ -14,11 +13,11 @@ class BaseDAOImpl implements BaseDAO {
     $this->setTableName($tblName);
   }
 
-  public setTableName($tblName) {
+  public function setTableName($tblName) {
     $this->tableName = '`'.$tblName.'`';
   }
 
-  public getTableName() {
+  public function getTableName() {
     return $this->tableName;
   }
 
@@ -41,7 +40,13 @@ class BaseDAOImpl implements BaseDAO {
 		return $this->getList($sqlQuery);
   }
 
-	public function clean(){
+  public function delete($id) {
+    $sql = 'DELETE FROM '.$this->tableName .' WHERE '. $this->tableName .'_id = ?';
+		$sqlQuery = new SqlQuery($sql);
+		return $this->executeUpdate($sqlQuery);
+  }
+
+	public function clearAllRows(){
 		$sql = 'DELETE FROM '.$this->tableName;
 		$sqlQuery = new SqlQuery($sql);
 		return $this->executeUpdate($sqlQuery);
@@ -57,7 +62,7 @@ class BaseDAOImpl implements BaseDAO {
   }
 
   public function update($genericDTO) {
-    $sql = 'UPDATE ' .$this->tableName. 'SET ' /*columname and value*/ .'WHERE id = $genericDTO->id'
+    $sql = 'UPDATE ' .$this->tableName. 'SET ' /*columname and value*/ .'WHERE id = $genericDTO->id';
     $sqlQuery = new SqlQuery($sql);
     $sqlQuery->setNumber($genericDTO->columnName);
     return $this->executeUpdate($sqlQuery);
@@ -84,8 +89,8 @@ class BaseDAOImpl implements BaseDAO {
 			return null;
 		}
 		$ret = array();
-		for($i=0;$i<count($tab);$i++){
-			$ret[$i] = $tab[$i]);
+		for($i=0;$i<count($tab);$i++) {
+			$ret[$i] = $tab[$i];
 		}
 		return $ret;
 	}

@@ -1,8 +1,8 @@
 <?php
 
-require_once('Connection.php');
-require_once('Transaction.php');
-require_once('SqlQuery.php');
+require_once('Transaction.class.php');
+require_once('Connection.class.php');
+require_once('QueryExecutor.class.php');
 
 class QueryExecutor {
 
