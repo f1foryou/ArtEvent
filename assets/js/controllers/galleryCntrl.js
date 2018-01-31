@@ -2,18 +2,18 @@ define(['./module'], function (controllers) {
 	controllers.controller('galleryCntrl', ['$scope', function ($scope) {
 
   $scope.thumbs = [
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-10.jpg","name":"Cat on Fence","id":"0"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-7.jpg","name":"Cat in Sun","id":"1"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-9.jpg", "name":"Blue Eyed Cat","id":"2"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-5.jpg", "name":"Patchy Cat","id":"3"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-6.jpg", "name":"Feral Cats","id":"4"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-3.jpg", "name":"Mad Cat","id":"5"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-1.jpg", "name":"Fluffy Cat","id":"6"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-4.jpg", "name":"Cat Laying Down","id":"7"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-8.jpg", "name":"Content Cat","id":"8"},
-      {"image":"http://lorempixel.com/output/cats-q-c-640-480-2.jpg", "name":"Hissing Cat","id":"9"},
-      {"image":"http://lorempixel.com/output/animals-q-c-640-480-4.jpg", "name":"Not a Cat","id":"10"},
-      {"image":"http://lorempixel.com/output/animals-q-c-640-480-10.jpg", "name":"Also not a Cat","id":"11"}
+      {"image":"assets/images/400x400.png","name":"Cat on Fence","id":"0"},
+      {"image":"assets/images/400x400.png","name":"Cat in Sun","id":"1"},
+      {"image":"assets/images/400x400.png", "name":"Blue Eyed Cat","id":"2"},
+      {"image":"assets/images/400x400.png", "name":"Patchy Cat","id":"3"},
+      {"image":"assets/images/400x400.png", "name":"Feral Cats","id":"4"},
+      {"image":"assets/images/400x400.png", "name":"Mad Cat","id":"5"},
+      {"image":"assets/images/400x400.png", "name":"Fluffy Cat","id":"6"},
+      {"image":"assets/images/400x400.png", "name":"Cat Laying Down","id":"7"},
+      {"image":"assets/images/400x400.png", "name":"Content Cat","id":"8"},
+      {"image":"assets/images/400x400.png", "name":"Hissing Cat","id":"9"},
+      {"image":"assets/images/400x400.png", "name":"Not a Cat","id":"10"},
+      {"image":"assets/images/400x400.png", "name":"Also not a Cat","id":"11"}
     ];
 
     $scope.addDiv = function(data){
