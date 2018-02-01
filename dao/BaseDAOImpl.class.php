@@ -1,7 +1,7 @@
 <?php
-require_once('../dao/BaseDAO.class.php');
-require_once('../db/SqlQuery.class.php');
-require_once('../db/QueryExecutor.class.php');
+require_once('BaseDAO.class.php');
+require_once('SqlQuery.class.php');
+require_once('QueryExecutor.class.php');
 /**
  *
  */
@@ -52,19 +52,12 @@ class BaseDAOImpl implements BaseDAO {
 		return $this->executeUpdate($sqlQuery);
 	}
 
-  public function insert($genericDTO) {
-    $sql = 'INSERT INTO ' .$this->tableName. '() VALUES ()';
-    $sqlQuery = new SqlQuery($sql);
-    $sqlQuery->setNumber($genericDTO->columnName);
+  public function insert(SqlQuery $sqlQuery) {
     $id = $this->executeInsert($sqlQuery);
-    $genericDTO->id = $id;
-    return $id; // or $genericDTO
+    return $id;
   }
 
-  public function update($genericDTO) {
-    $sql = 'UPDATE ' .$this->tableName. 'SET ' /*columname and value*/ .'WHERE id = $genericDTO->id';
-    $sqlQuery = new SqlQuery($sql);
-    $sqlQuery->setNumber($genericDTO->columnName);
+  public function update(SqlQuery $sqlQuery) {
     return $this->executeUpdate($sqlQuery);
   }
 

@@ -34,19 +34,24 @@
 									<div class="col-sm-10 col-sm-offset-1">
 										<div role="form" data-parsley-validate="" autocomplete="on" novalidate="" class="mb-lg">
 											<div class="form-group has-feedback">
-												<input id="email" type="text" placeholder="Email Id" autocomplete="on" required class="form-control">
+												<input ng-required="true" ng-model="uname" id="name" type="text" placeholder="Full Name : John Doe" autocomplete="on" required class="form-control">
+												<span class="fa fa-user form-control-feedback text-muted" style="padding-top:10px"></span>
+											</div>
+											<div class="form-group has-feedback">
+												<input ng-required="true" ng-model="umail" id="email" type="text" placeholder="Email Id" autocomplete="on" required class="form-control">
 												<span class="fa fa-envelope  form-control-feedback text-muted" style="padding-top:10px"></span>
 											</div>
 											<div class="form-group has-feedback">
-												<input id="password" type="password" placeholder="Password" required class="form-control">
+												<input ng-required="true" ng-model="upass" id="password" type="password" placeholder="Password" required class="form-control">
 												<span class="fa fa-lock form-control-feedback text-muted" style="padding-top:10px"></span>
 											</div>
 											<div class="form-group has-feedback">
-												<input id="cnfrmpassword" type="password" placeholder="Confrim Password" required class="form-control">
+												<input ng-required="true" ng-model="confirm_upass" id="cnfrmpassword" type="password" placeholder="Confrim Password" required class="form-control">
 												<span class="fa fa-lock form-control-feedback text-muted" style="padding-top:10px"></span>
 											</div>
-											<input type="submit" class="btn btn-block btn-primary mt-lg" id="register" 
-											style="background-color:#1FA7D4" value="REGISTER">
+											<span style="color:#FFFFFF" ng-show="upass !== confirm_upass">Passwords mismatch</span>
+											<input type="submit" class="btn btn-block btn-primary mt-lg" id="register"
+											style="background-color:#1FA7D4" value="REGISTER" ng-click="registerUser()">
 											<br>
 											<h6 style="color:#dde2de!important">
 												ALREADY CONNECTED ? &nbsp;

@@ -1,9 +1,9 @@
 <?php
 require_once('BaseDAOImpl.class.php');
-require_once('../dao/UserDAO.class.php');
-require_once('../db/SqlQuery.class.php');
-require_once('../db/QueryExecutor.class.php');
-require_once('../dto/UserDTO.class.php');
+require_once('UserDAO.class.php');
+require_once('SqlQuery.class.php');
+require_once('QueryExecutor.class.php');
+require_once('UserDTO.class.php');
 /**
  *
  */
@@ -11,6 +11,16 @@ class UserDAOImpl extends BaseDAOImpl implements UserDAO {
 
   function __construct(){
     parent::__construct('users');
+  }
+
+  public function insert(UserDTO $tempUserDTO) {
+    $sql = 'INSERT INTO users(users_name, users_email, users_password, users_active) values(?, ?, ?, ?)'
+    $sqlQuery = new SqlQuery($sql);
+    $sqlQuery->setString($tempUserDTO->name);
+    $sqlQuery->setString($tempUserDTO->email);
+    $sqlQuery->setString($tempUserDTO->password);
+    $sqlQuery->setNumber(1);
+    $id = parent::insert($sqlQuery);
   }
 
   public function findByMailAndPassword(UserDTO $tempUserDTO){

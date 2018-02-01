@@ -12,10 +12,11 @@
 		public function __construct() {
         }
 
-		public function tempConstruct($email,$password){
+		public function tempConstruct($email, $password, $name=''){
 			$instance = new self();
 			$instance->email = $email;
 			$instance->password = $password;
+			$instance->name = $name;
 			return $instance;
 		}
 
