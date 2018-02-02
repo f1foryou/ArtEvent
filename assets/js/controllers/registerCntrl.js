@@ -1,17 +1,20 @@
 define(['./module'], function (controllers) {
-	controllers.controller('loginCntrl', ['$scope','$http', function ($scope,$http) {
+	controllers.controller('registerCntrl', ['$scope','$http', function ($scope,$http) {
 
 		$scope.umail=null;
 		$scope.upass=null;
+		$scope.confirm_upass=null;
+		$scope.uname=null;
 
-		$scope.loginDetails = function(data, event) {
+		$scope.registerUser = function(data, event) {
 			$http({
-				method : "GET",
+				method : "POST",
 				url : "controllers/usercontroller.php",
 				params:{
 					umail:$scope.umail,
 					upass:$scope.upass,
-					act:'login',
+					uname:$scope.uname,
+					act:'register',
 				}
 			}).then(function mySuccess(response) {
 				$scope.myWelcome = response.data;

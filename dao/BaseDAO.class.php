@@ -13,9 +13,9 @@ interface BaseDAO {
 
   public function delete($id);
 
-  public function insert($sqlQuery);
+  public function insert(SqlQuery $sqlQuery);
 
-  public function update($sqlQuery);
+  public function update(SqlQuery $sqlQuery);
 
   public function clearAllRows();
 

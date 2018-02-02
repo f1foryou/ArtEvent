@@ -47,7 +47,7 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 			});
 			$routeProvider.when('/register',{
 				templateUrl: 'views/register.html',
-				controller: "loginCntrl"
+				controller: "registerCntrl"
 			});
 			$routeProvider.when('/gallery',{
 				templateUrl: 'views/gallery.html',

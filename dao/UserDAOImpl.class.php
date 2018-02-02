@@ -21,6 +21,7 @@ class UserDAOImpl extends BaseDAOImpl implements UserDAO {
     $sqlQuery->setString($tempUserDTO->password);
     $sqlQuery->setNumber(1);
     $id = parent::insert($sqlQuery);
+    return $id;
   }
 
   public function findByMailAndPassword(UserDTO $tempUserDTO){
