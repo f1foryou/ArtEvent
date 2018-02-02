@@ -213,107 +213,85 @@
 		</div>
 		<hr class="featurette-divider">		
 		<div class="row" id="plans">
-			<div class="col-xs-12 col-sm-12" align="center">
-				<h2>Pricing Plans</h2>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="panel text-center price-panel panel-grey">
-						<div class="panel-heading">
-							<h3>FREE PLAN</h3>
-						</div>
-						<div class="panel-body">
-							<p class="lead big-lead"><strong>$0</strong></p>
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<i class="fa fa-check text-success"></i> Personal use only
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i>Unlimited projects
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i> 27/7 support
-							</li>
-						</ul>
-						<div class="panel-footer">
-							<a href="#" class="btn btn-lg btn-block btn-default">BUY NOW!</a>
+			<section id="bs-pricing-five" class="bs-pricing-five p-top-100 bg-white">
+				<div class="container">
+					<div class="row">
+						<div class="bs-five-area bs-radius">
+							<div class="col-md-3 no-padding" ng-repeat="price in pricingPlans">
+								<div class="bs-five">
+									<h6 class="text-uppercase">{{price.name}}</h6>
+									<h1 class="bs-caption"><sup>Rs.</sup>{{price.cost}}</h1>
+									<ul>
+										<li><b>{{price.features.participants}} Participants</b></li>
+										<li>{{price.features.support}} Customer Support</li>
+										<li>{{price.features.type}}</li>
+										<li>{{price.features.report}}</li>
+									</ul>
+									<a href="" class="btn btn-success btn-round m-top-40">Post Event</a>  
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="panel text-center price-panel panel-blue">
-						<div class="panel-heading">
-							<h3>STARTER PLAN</h3>
-						</div>
-						<div class="panel-body">
-							<p class="lead big-lead"><strong>$10</strong></p>
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<i class="fa fa-check text-success"></i> Personal use only
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i>Unlimited projects
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i> 27/7 support
-							</li>
-						</ul>
-						<div class="panel-footer">
-							<a href="#" class="btn btn-lg btn-block btn-primary">BUY NOW!</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="panel text-center price-panel panel-green">
-						<div class="panel-heading">
-							<h3>DEV PLAN</h3>
-						</div>
-						<div class="panel-body">
-							<p class="lead big-lead"><strong>$50</strong></p>
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<i class="fa fa-check text-success"></i> Personal use only
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i>Unlimited projects
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i> 27/7 support
-							</li>
-						</ul>
-						<div class="panel-footer">
-							<a href="#" class="btn btn-lg btn-block btn-success">BUY NOW!</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="panel text-center price-panel panel-red">
-						<div class="panel-heading">
-							<h3>PRO PLAN</h3>
-						</div>
-						<div class="panel-body">
-							<p class="lead big-lead"><strong>$99</strong></p>
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<i class="fa fa-check text-success"></i> Personal use only
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i>Unlimited projects
-							</li>
-							<li class="list-group-item">
-								<i class="fa fa-times  text-danger"></i> 27/7 support
-							</li>
-						</ul>
-						<div class="panel-footer">
-							<a href="#" class="btn btn-lg btn-block btn-danger">BUY NOW!</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			</section>			
 		</div>
 	</div>
 </div>
+
+<footer class="footer-distributed">
+
+	<div class="footer-left">
+
+		<h3>Company<span>logo</span></h3>
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+	<div class="footer-center">
+
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>1234 Street Name</span> City AA 99999</p>
+		</div>
+
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+91 9876 5432 10</p>
+		</div>
+
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:info@LaNterNiTe.com">info@LaNterNiTe.com</a></p>
+		</div>
+
+	</div>
+
+	<div class="footer-right">
+		<u><span>Site map</span></u>
+			<p class="footer-links">
+				<a href="#">Home</a>
+				<br>
+				<a href="#">Products</a>
+				<br>
+				<a href="#">Pricing</a>
+				<br>
+				<a href="#">Contact</a>
+			</p>
+
+			<br><br><p class="footer-company-name">Company Name &copy; 2018</p>
+	</div>
+
+</footer>

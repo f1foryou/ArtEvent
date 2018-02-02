@@ -1,40 +1,99 @@
-<div class="content">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3>Events</h3>
+<link href="assets/css/profile.css" rel="stylesheet">
+<div class="container">
+	<div class="row vdivide profile">
+		<div class="col-sm-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="assets/images/400x400.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Marcus Doe
+					</div>
+					<div class="profile-userbuttons">
+						<div class="row">
+							<div class="col-xs-6">
+								<h4>Ongoing</h4>
+								54
+							</div>
+							<div class="col-xs-6">
+								<h4>Participated</h4>
+								54
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#ongoing" aria-controls="details" role="tab" data-toggle="tab">Ongoing Events</a>
+						</li>
+						<li role="presentation">
+							<a href="#participated" aria-controls="prizes" role="tab" data-toggle="tab">Participated Events</a>
+						</li>
+						<li>
+							<a href="#!/events">All Events</a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-8" align="center">
-				<ul class="nav nav-pills nav-justified">
-					<li class="active">
-						<a data-toggle="tab" href="#applied">Applied</a>
-					</li>
-					<li>
-						<a data-toggle="tab" href="#all">All</a>
-					</li>
-					<li>
-						<a data-toggle="tab" href="#quiz">Quiz</a>
-					</li>
-					<li>
-						<a data-toggle="tab" href="#coming">Coming Soon</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-content">
-						<h5 class="card-title">
-								Bootstrap 3 Carousel FadeIn Out Effect
-						</h5>
-						<p class="">
-						</p>
+		<div class="col-sm-9">
+			<div class="profile-content">
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="ongoing">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3" ng-repeat="event in ongoingEvents">
+								<a class="card" ng-href="#!/event/{{event.id}}">
+									<div class="img-card">
+										<img ng-src="{{event.img}}" />
+									</div>
+									<div class="card-content">
+										<h5 class="card-title">
+												{{event.name}}
+										</h5>
+										<p class="">
+											<strong>Ends On </strong> {{event.end_date}}
+										</p>
+									</div>
+									<div class="card-read-more">
+										<div class="btn btn-link btn-block">
+											Read More
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="card-read-more">
-						<a href="" class="btn btn-link btn-block">
-							Edit
-						</a>
+					<div role="tabpanel" class="tab-pane" id="participated">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3" ng-repeat="event in participatedEvents">
+								<a class="card" ng-href="#!/event/{{event.id}}">
+									<div class="img-card">
+										<img ng-src="{{event.img}}" />
+									</div>
+									<div class="card-content">
+										<h5 class="card-title">
+												{{event.name}}
+										</h5>
+										<p class="">
+											<strong>Ends On </strong> {{event.end_date}}
+										</p>
+									</div>
+									<div class="card-read-more">
+										<div class="btn btn-link btn-block">
+											Read More
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

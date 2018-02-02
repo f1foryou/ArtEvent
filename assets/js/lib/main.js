@@ -28,7 +28,7 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 				ng.bootstrap(document, ['app']);
 		});
 
-		return app.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
+		return app.config(['$routeProvider', function ($routeProvider) {
 			$routeProvider.when('/events', {
 				templateUrl: 'views/events.html',
 				controller : "eventsCntrl"

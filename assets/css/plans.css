@@ -1,67 +1,100 @@
-      .big-lead {
-        font-size: 40px;
-      }
+.p-top-100{
+    padding:100px 0;
+}
+.m-top-40{
+    margin-top: 40px;
+}
 
-      .price-panel,
-      .price-panel > .panel-heading {
-        -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
-      }
 
-      .price-panel:hover {
-        box-shadow: 0 0 30px rgba(0,0,0, .2);
-      }
-      .price-panel:hover > .panel-heading {
-        box-shadow: 0 0 30px rgba(0,0,0, .2) inset;
-      }
 
-      .price-panel > .panel-heading {
-        color: white;
-        text-shadow: 0 3px 0 rgba(50,50,50, .6);
-        border-radius: 0;
-        box-shadow: 0 5px 0 rgba(50,50,50, .2) inset;
-      }
-      .price-panel > .panel-body {
-        color: white;
-        text-shadow: 0 3px 0 rgba(50,50,50, .3);
-      }
-      .price-panel > .list-group {
-        font-weight: 600;
-      }
-      .price-panel > .panel-footer {
-        box-shadow: 0 3px 0 rgba(0,0,0, .3);
-      }
 
-      .panel-grey > .panel-heading {
-        background-color: #6d6d6d;
-        border-color: #b7b7b7;
-      }
-      .panel-grey > .panel-body {
-        background-color: #808080;
-      }
+/*=================================================
+Pricint fiv
+===================================================*/
+.bs-five-area{
+    width:100%;
+    display: inline-block;
+    box-shadow: 0px 0px 6px 0px #ddd;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
 
-      .panel-blue > .panel-heading {
-        background-color: #608bb4;
-        border-color: #78aee1;
-      }
-      .panel-blue > .panel-body {
-        background-color: #73a3d4;
-      }
+.bs-five-area.bs-radius{
+    border-radius: 30px;
+}
+.bs-five-area > div{
+    padding:0;
+}
 
-      .panel-green > .panel-heading {
-        background-color: #57ac57;
-        border-color: #71df71;
-      }
-      .panel-green > .panel-body {
-        background-color: #65c965;
-      }
 
-      .panel-red > .panel-heading {
-        background-color: #d04e50;
-        border-color: #ff6062;
-      }
-      .panel-red > .panel-body {
-        background-color: #ef5a5c;
-      }
+.bs-five-area .bs-five{
+    position: relative;
+    width: 100%;  
+    margin: auto; 
+    transition: all 0.4s;
+    padding:20px 0px;
+}
+.bs-five-area .bs-five h6{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.bs-five-area .bs-five h1{
+    font-size:64px;
+    font-weight: 100;
+    line-height: 72px;
+}
+.bs-five-area .bs-five h1 sup{
+    font-size:30px;
+    top:-30px;
+}
+.bs-five-area .bs-five ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.bs-five-area .bs-five ul li{
+    line-height: 45px;
+    border-bottom:0px;
+}
+
+
+.bs-five-area .bs-five:hover{
+
+    background: #179880; 
+    transition: all 0.4s;
+
+}
+
+.bs-five-area .bs-five.active {
+    background: #179880; 
+    background: -webkit-linear-gradient(left, #179880 , #21A476); 
+    background: -o-linear-gradient(right, #179880, #21A476); 
+    background: -moz-linear-gradient(right, #179880, #21A476); 
+    background: linear-gradient(to right, #179880 , #21A476);  
+}
+
+.bs-five-area .bs-five .btn-success{
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #179880;
+    border-color: #21A476;
+}
+
+
+.bs-five-area .bs-five.active .btn.btn-success, 
+.bs-five-area .bs-five:hover.bs-five .btn.btn-success{
+    background: #E0FFF6 ; 
+    color:#444 ;
+
+}
+
+.bs-five-area .bs-five.active,
+.bs-five-area .bs-five.active ul li,
+.bs-five-area .bs-five:hover.bs-five, 
+.bs-five-area .bs-five:hover.bs-five ul li
+{
+    color:#fff;
+}
