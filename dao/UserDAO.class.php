@@ -6,6 +6,8 @@ interface UserDAO extends BaseDAO {
 
   public function findByMailAndPassword(UserDTO $userDTO);
 
+  public function insertIntoUsers(UserDTO $userDTO);
+
 }
 
 ?>
