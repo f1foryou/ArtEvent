@@ -3,13 +3,17 @@ define(['./module'], function (controllers) {
 
 		$scope.id=$routeParams.id;
 		$scope.name=$routeParams.name;
-		$scope.event = [
-			{"id":1,"name":"Event 1", "end_date":"Sep 10 2018","img":"assets/images/1000x400.png"},
-		];
-
-		$scope.sayHello = function() {
-			$scope.greeting = 'Hello  !';
+		$scope.event ={
+			"id":1,
+			"name":"Event 1",
+			"host":"ASD",
+			"start_date":"Sep 10 2018", 
+			"end_date":"Oct 9 2018",
+			"img":"assets/images/1000x400.png",
+			"status":"ongoing",
 		};
+
+		$('#preloader').hide();
 
 		return $scope;
 	}]);

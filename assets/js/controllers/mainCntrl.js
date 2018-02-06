@@ -29,7 +29,7 @@ define(['./module'], function (controllers) {
 		
 		$location.hash($routeParams.section);
 		$anchorScroll();
-
+		$("#preloader").hide();
 		return {
 			$scope:$scope,
 			$location:$location,

@@ -19,15 +19,22 @@
 		<link href="assets/css/cards.css" rel="stylesheet">
 		<link href="assets/css/index.css" rel="stylesheet">
 		<link href="assets/css/plans.css" rel="stylesheet">
-
+		<link href="assets/css/gallery.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+
+		<script src="assets/js/lib/jquery/jquery.js"></script>
+
 		<style type="text/css">
 			.container{
 				width: 100% !important;
 			}
 		</style>
+		<script type="text/javascript">
+			$("#preloader").show();
+		</script>
 	</head>
 	<body>
+		<div id="preloader"></div>
 		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
 			<div class="container" style="width: 100% !important;">
 				<div class="navbar-header">
@@ -70,7 +77,48 @@
 		</nav>		
 		<section class="wrapper" data-ng-view>
 		</section>
-		<script src="assets/js/lib/jquery/jquery.js"></script>
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Company<span>logo</span></h3>
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>1234 Street Name</span> City AA 99999</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 9876 5432 10</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:info@LaNterNiTe.com">info@LaNterNiTe.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<u><span>Site map</span></u>
+				<p class="footer-links">
+					<a href="#">Home</a>
+					<br>
+					<a href="#">Products</a>
+					<br>
+					<a href="#">Pricing</a>
+					<br>
+					<a href="#">Contact</a>
+				</p>
+				<br><br><p class="footer-company-name">Company Name &copy; 2018</p>
+			</div>
+		</footer>
 		<script src="assets/js/require.js" data-main="assets/js/lib/main.js"></script>
 		<script src="assets/js/common_utils.js"></script>
   </body>
