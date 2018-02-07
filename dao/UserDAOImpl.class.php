@@ -14,7 +14,7 @@ class UserDAOImpl extends BaseDAOImpl implements UserDAO {
   }
 
   public function insertIntoUsers(UserDTO $tempUserDTO) {
-    $sql = 'INSERT INTO users(users_name, users_email, users_password, users_active) values(?, ?, ?, ?)';
+    $sql = 'INSERT INTO users(user_name, user_email, user_password, user_active) values(?, ?, ?, ?)';
     $sqlQuery = new SqlQuery($sql);
     $sqlQuery->setString($tempUserDTO->name);
     $sqlQuery->setString($tempUserDTO->email);
@@ -29,13 +29,13 @@ class UserDAOImpl extends BaseDAOImpl implements UserDAO {
     $email = $tempUserDTO->email;
     $password = $tempUserDTO->password;
 
-    $sql="SELECT * FROM users where users_email='".$email."' and users_password='".$password."'";
+    $sql="SELECT * FROM users where user_email='".$email."' and user_password='".$password."'";
     $sqlQuery = new SqlQuery($sql);
     $row = QueryExecutor::execute($sqlQuery);
-    if(($row[0]['users_email']==$email)&&($row[0]['users_password']==$password))
+    if(($row[0]['user_email']==$email)&&($row[0]['user_password']==$password))
     {
       $userDetails = new UserDTO();
-      $userDetails = $userDetails->resultConstruct($row[0]['users_id'],$row[0]['users_name'],$row[0]['users_email'],$row[0]['users_active'],$row[0]['created_date'],$row[0]['last_mod_date']);
+      $userDetails = $userDetails->resultConstruct($row[0]['user_id'],$row[0]['user_name'],$row[0]['user_email'],$row[0]['user_active'],$row[0]['created_date'],$row[0]['last_mod_date']);
       return array('result' =>'success','data' => $userDetails);
     }else{
       return array('result' => "error");
