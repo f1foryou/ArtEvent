@@ -44,5 +44,5 @@ define(['./module'], function (controllers) {
     })
 
 	}]);
+  $("#preloader").hide();  
 });
-

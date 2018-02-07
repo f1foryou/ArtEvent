@@ -29,6 +29,7 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 		});
 
 		return app.config(['$routeProvider', function ($routeProvider) {
+			$("#preloader").show();
 			$routeProvider.when('/events', {
 				templateUrl: 'views/events.html',
 				controller : "eventsCntrl"

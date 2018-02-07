@@ -19,7 +19,7 @@ define(['./module'], function (controllers) {
 				$scope.myWelcome = response.data;
 			});
 		};
-
+		$("#preloader").hide();
 		return $scope;
 	}]);
 });
