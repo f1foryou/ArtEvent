@@ -14,9 +14,8 @@ class UserDAOImpl extends BaseDAOImpl implements UserDAO {
   }
 
   public function insertIntoUsers(UserDTO $tempUserDTO) {
-    $sql = 'INSERT INTO users(users_id, users_name, users_email, users_password, users_active) values(?, ?, ?, ?, ?)';
+    $sql = 'INSERT INTO users(users_name, users_email, users_password, users_active) values(?, ?, ?, ?)';
     $sqlQuery = new SqlQuery($sql);
-    $sqlQuery->setNumber(10);
     $sqlQuery->setString($tempUserDTO->name);
     $sqlQuery->setString($tempUserDTO->email);
     $sqlQuery->setString($tempUserDTO->password);

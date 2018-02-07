@@ -1,6 +1,6 @@
 <?php
 	require_once '../dao/UserDAOImpl.class.php';
-	//require_once '../dao/DAOFactory.class.php';
+	require_once '../dao/DAOFactory.class.php';
 	require_once '../dao/Transaction.class.php';
 	require_once '../dao/UserDTO.class.php';
 
@@ -15,20 +15,20 @@
 		$tempUserDto = $tempUserDto->tempConstruct($email,$pass);
 
 		//DAO Function call
-		$userDao = new UserDAOImpl();
-		$result = $userDao->findByMailAndPassword($tempUserDto);
+		//$userDao = new UserDAOImpl();
+		//$result = $userDao->findByMailAndPassword($tempUserDto);
 
-		//$result = DAOFactory::getUserDAO()->findByMailAndPassword($tempUserDto);
+		$result = DAOFactory::getUserDAO()->findByMailAndPassword($tempUserDto);
 
 		header('Content-type: application/json');
 		echo json_encode($result);
 		$transaction->commit();
 	}
 
-	if((isset($_POST['act']))&&($_POST['act']=="register")){
-		$email = $_POST['umail'];
-		$pass = $_POST['upass'];
-		$uname = $_POST['uname'];
+	if((isset($_GET['act']))&&($_GET['act']=="register")){
+		$email = $_GET['umail'];
+		$pass = $_GET['upass'];
+		$uname = $_GET['uname'];
 
 		$transaction = new Transaction();
 
@@ -37,10 +37,10 @@
 		$tempUserDto = $tempUserDto->tempConstruct($email, $pass, $uname);
 
 		//DAO Function call
-		$userDao = new UserDAOImpl();
-		$result = $userDao->insert($tempUserDto);
+		//$userDao = new UserDAOImpl();
+		//$result = $userDao->insertIntoUsers($tempUserDto);
 
-		//$result = DAOFactory::getUserDAO()->insert($tempUserDto);
+		$result = DAOFactory::getUserDAO()->insertIntoUsers($tempUserDto);
 
 		header('Content-type: application/json');
 		echo json_encode($result);
