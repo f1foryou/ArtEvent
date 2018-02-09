@@ -54,7 +54,7 @@
 			<div class="col-sm-12" align="center">
 				<h2>Featured Events</h2>
 			</div>
-			<div class="col-xs-12 col-sm-3" ng-repeat="event in featuredEvents">
+			<div class="col-xs-12 col-sm-3" ng-repeat="event in allEvents.featuredEvents">
 				<a class="card" ng-href="#!/event/{{event.id}}">
 					<div class="img-card">
 						<img ng-src="{{event.img}}" />
@@ -114,7 +114,7 @@
 				<div class="tab-content">
 					<div id="all" class="tab-pane fade in active">
 						<div class="row nopadding">
-							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents">
+							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents.onGoingEvents">
 								<a class="card" ng-href="#!/event/{{event.id}}">
 									<div class="img-card">
 										<img ng-src="{{event.img}}" />
@@ -138,7 +138,7 @@
 					</div>
 					<div id="img" class="tab-pane fade">
 						<div class="row nopadding">
-							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents" ng-show="event.type == 'image'">
+							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents.onGoingEvents" ng-show="event.type == 'image'">
 								<a class="card" ng-href="#!/event/{{event.id}}">
 									<div class="img-card">
 										<img ng-src="{{event.img}}" />
@@ -162,7 +162,7 @@
 					</div>
 					<div id="quiz" class="tab-pane fade">
 						<div class="row nopadding">
-							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents" ng-show="event.type == 'quiz'">
+							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents.onGoingEvents" ng-show="event.type == 'quiz'">
 								<a class="card" ng-href="#!/event/{{event.id}}">
 									<div class="img-card">
 										<img ng-src="{{event.img}}" />
@@ -186,7 +186,7 @@
 					</div>
 					<div id="coming" class="tab-pane fade">
 						<div class="row nopadding">
-							<div class="col-xs-12 col-sm-4" ng-repeat="event in cmngEvents">
+							<div class="col-xs-12 col-sm-4" ng-repeat="event in allEvents.cmngEvents">
 								<a class="card" ng-href="#!/event/{{event.id}}">
 									<div class="img-card">
 										<img ng-src="{{event.img}}" />

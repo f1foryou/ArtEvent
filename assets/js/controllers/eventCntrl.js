@@ -11,6 +11,8 @@ define(['./module'], function (controllers) {
 			"end_date":"Oct 9 2018",
 			"img":"assets/images/1000x400.png",
 			"status":"ongoing",
+			"type":"quiz",
+			"isfeatured":0
 		};
 
 		$('#preloader').hide();
