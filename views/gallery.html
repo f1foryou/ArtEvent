@@ -1,37 +1,57 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<h2>Event Name</h2>
-		</div>
-	</div>
-	<div class="row" ng-controller="galleryCntrl">
-		<div class="col-xs-12">
-			<div class="col-xs-6 col-sm-4 col-lg-3 no-padding thumb" ng-repeat="thumb in thumbs" ng-controller="galleryCntrl" ng-init="addDiv(thumb)"> 
-				<a ng-click="openLightboxModal($index)">
-					<img ng-src="{{thumb.image}}" alt="{{thumb.name}}" class="thumbnail img-responsive" id="$index"  />
-				</a>
-			</div>
-		</div>
-	</div>   
+  <div class="row">
+      <div class="col-xs-12">
+        <h2 style="color:black"><b>{{eventDet.name}}</b></h2>
+        <p>
+          <span><em>{{eventDet.desc}}</em></span>
+        </p>
+      </div>
+  </div>
+  <div class="row" ng-controller="galleryCntrl">
+    <div class="col-xs-12">
+      <div class="thumbnail col-xs-6 col-sm-4 col-lg-3 no-padding eventDet" ng-repeat="thumb in eventDet.images" ng-controller="galleryCntrl" ng-init="addDiv(thumb)"> 
+        <a ng-click="openLightboxModal($index,thumb)" style="position:relative;">
+          <div class="hovereffect">
+            <img ng-src="{{thumb.image}}" alt="{{thumb.name}}" class="thumbnail img-responsive" id="$index"  />
+            <div class="overlay">
+              <h2><em>{{thumb.name}}</em></h2>
+              <!-- <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+              </button> -->              
+              <!-- <button type="button" class="btn btn-success">Success</button> -->
+              <p class="icon-links">
+                <a href="#">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>   
 </div>
 <div class="modal" id="myModal" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button class="close" type="button" data-dismiss="modal">×</button>
-				<h3 class="modal-title"></h3>
-			</div>
-			<div class="modal-body">
-				<div id="modalCarousel" class="carousel"> 
-					<div class="carousel-inner">
-					</div>
-					<a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-					<a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-	 	</div>
-	</div>
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <button class="close" type="button" data-dismiss="modal">×</button>
+    <center><h3 class="modal-title"></h3></center>
+  </div>
+  <div class="modal-body">
+    <div id="modalCarousel" class="carousel"> 
+          <div class="carousel-inner">
+          </div>
+          <a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+  </div>
+  <div class="modal-footer">
+    <p class="modal-desc"></p>
+    <button type="button" class="btn btn-success btn-sm">
+      <span class="glyphicon glyphicon-thumbs-up"></span> Like
+    </button>
+  </div>
+   </div>
+  </div>
 </div>

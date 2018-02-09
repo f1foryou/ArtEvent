@@ -160,3 +160,9 @@
 	padding: 10px;
 	border-top: 0px;
 }
+
+p.modal-desc {
+	text-align: left;
+	font-style: italic;
+	font-style: oblique;
+}
