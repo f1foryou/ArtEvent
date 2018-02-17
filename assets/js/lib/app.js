@@ -8,6 +8,7 @@ define([
 	'../controllers/loginCntrl',
 	'../controllers/registerCntrl',
 	'../controllers/galleryCntrl',
+	'../controllers/conductedEventCntrl',
 ], function (angular) {
 
 	return angular.module('app', [

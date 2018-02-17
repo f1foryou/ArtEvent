@@ -11,7 +11,7 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Marcus Doe
+						{{user.name}}
 					</div>
 					<div class="profile-userbuttons">
 						<div class="row">
@@ -35,6 +35,9 @@
 						</li>
 						<li role="presentation">
 							<a href="#participated" aria-controls="prizes" role="tab" data-toggle="tab">Participated Events</a>
+						</li>
+						<li role="presentation">
+							<a href="#conducted" aria-controls="prizes" role="tab" data-toggle="tab">Events Conducted</a>
 						</li>
 						<li>
 							<a href="#!/events">All Events</a>
@@ -75,6 +78,30 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-3" ng-repeat="event in participatedEvents">
 								<a class="card" ng-href="#!/event/{{event.id}}">
+									<div class="img-card">
+										<img ng-src="{{event.img}}" />
+									</div>
+									<div class="card-content">
+										<h5 class="card-title">
+												{{event.name}}
+										</h5>
+										<p class="">
+											<strong>Ends On </strong> {{event.end_date}}
+										</p>
+									</div>
+									<div class="card-read-more">
+										<div class="btn btn-link btn-block">
+											Read More
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="conducted">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3" ng-repeat="event in conductedEvents">
+								<a class="card" ng-href="#!/conducted/{{event.id}}">
 									<div class="img-card">
 										<img ng-src="{{event.img}}" />
 									</div>

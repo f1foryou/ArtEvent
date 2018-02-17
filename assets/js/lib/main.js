@@ -3,7 +3,8 @@ require.config({
 		'jquery': 'jquery/jquery',
 		'angular': 'angular/angular',
 		'angular-route': 'angular/angular-route',
-		'bootstrap': 'bootstrap/bootstrap'
+		'bootstrap': 'bootstrap/bootstrap',
+		'datatables': 'DataTables/datatables',
 	},
 	shim: {
 		'angular': {
@@ -18,11 +19,15 @@ require.config({
 		},
 		'bootstrap':{
 			exports:'bootstrap'
+		},
+		'datatables':{
+			deps:['jquery','bootstrap'],
+			exports:'datatables'
 		}
 	},
 });
-define(['jquery','angular','angular-route','bootstrap','app',],
-	function ($, ng,ngroute,bootstrap,app) {
+define(['jquery','angular','angular-route','bootstrap','datatables','app',],
+	function ($, ng,ngroute,bootstrap,datatables,app) {
 		$(document).ready(
 			function (document) {
 				ng.bootstrap(document, ['app']);
@@ -53,6 +58,10 @@ define(['jquery','angular','angular-route','bootstrap','app',],
 			$routeProvider.when('/gallery',{
 				templateUrl: 'views/gallery.html',
 				controller : "galleryCntrl"
+			});
+			$routeProvider.when('/conducted/:id',{
+				templateUrl: 'views/conducted_event.html',
+				controller : "conductedEventCntrl"
 			});
 			$routeProvider.when('/:section',{
 				templateUrl: 'views/main.html',

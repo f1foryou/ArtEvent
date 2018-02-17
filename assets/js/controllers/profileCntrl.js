@@ -1,9 +1,9 @@
 define(['./module'], function (controllers) {
 	controllers.controller('profileCntrl', ['$scope','$routeParams', function ($scope,$routeParams) {
 
-		$scope.event = [
-			{"id":1,"name":"Event 1", "end_date":"Sep 10 2018","img":"assets/images/1000x400.png"},
-		];
+		$scope.user ={
+			"id":1,"name":"Aravind",
+		};
 		$scope.ongoingEvents=[
 			{"id":1,"name":"Event 1", "end_date":"Sep 10 2018","img":"assets/images/1000x400.png"},
 			{"id":2,"name":"Event 2", "end_date":"Oct 10 2018","img":"assets/images/1000x400.png"},
@@ -13,6 +13,10 @@ define(['./module'], function (controllers) {
 			{"id":1,"name":"Event 1", "end_date":"Sep 10 2018","img":"assets/images/1000x400.png"},
 			{"id":2,"name":"Event 2", "end_date":"Oct 10 2018","img":"assets/images/1000x400.png"},
 		];
+		$scope.conductedEvents = [
+			{"id":1,"name":"Event 1", "end_date":"Sep 10 2018","img":"assets/images/1000x400.png"},
+			{"id":2,"name":"Event 2", "end_date":"Oct 10 2018","img":"assets/images/1000x400.png"},
+		]
 		$("#preloader").hide();		
 		return $scope;
 	}]);
