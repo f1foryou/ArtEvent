@@ -55,8 +55,14 @@ define(['./module'], function (controllers) {
 			$('.modal-title').html($(this).find('.active').attr("title"));
 			$('.modal-desc').html($(this).find('.active').attr("desc"));
 			$('.modal_like').attr('id',$(this).find('.active').attr("id"));
-		})
-		$("#preloader").hide();
+		});
+
+		angular.element(document).ready(function() {
+			dTable = $('.datatable');
+			dTable.DataTable();
+			$("#preloader").hide();
+		});
+
 		return $scope;
 	}]);
 });

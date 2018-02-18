@@ -4,7 +4,10 @@ require.config({
 		'angular': 'angular/angular',
 		'angular-route': 'angular/angular-route',
 		'bootstrap': 'bootstrap/bootstrap',
+		'bootstrap-datatables':'DataTables/dataTables.bootstrap',
 		'datatables': 'DataTables/datatables',
+		'datatables_responsive':'DataTables/dataTables.responsive.min',
+		'bootstrap_responsive_datatable':'DataTables/responsive.bootstrap.min'
 	},
 	shim: {
 		'angular': {
@@ -23,11 +26,24 @@ require.config({
 		'datatables':{
 			deps:['jquery','bootstrap'],
 			exports:'datatables'
-		}
+		},
+		'bootstrap-datatables':{
+			deps:['jquery','bootstrap'],
+			exports:'bootstrap-datatables'
+		},
+		'datatables_responsive':{
+			deps:['jquery','bootstrap'],
+			exports:'datatables_responsive'
+		},
+		'bootstrap_responsive_datatable':{
+			deps:['jquery','bootstrap'],
+			exports:'datatables_responsive'
+		},
 	},
 });
-define(['jquery','angular','angular-route','bootstrap','datatables','app',],
-	function ($, ng,ngroute,bootstrap,datatables,app) {
+define(['jquery','angular','angular-route','bootstrap','datatables',
+	'bootstrap-datatables','datatables_responsive','bootstrap_responsive_datatable','app',],
+	function ($, ng,ngroute,bootstrap,datatables,bootdata,responsive,bootdataresponsive,app) {
 		$(document).ready(
 			function (document) {
 				ng.bootstrap(document, ['app']);

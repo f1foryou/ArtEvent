@@ -7,7 +7,11 @@ define(['./module'], function (controllers) {
 			{"id":3,"name":"Event 3", "end_date":"Nov 10 2018","img":"assets/images/1000x400.png","sayHello":$scope.sayHello},
 		];
 
-		$("#preloader").hide();
+		angular.element(document).ready(function() {
+			dTable = $('.datatable');
+			dTable.DataTable();
+			$("#preloader").hide();
+		});
 		
 		return $scope;
 	}]);

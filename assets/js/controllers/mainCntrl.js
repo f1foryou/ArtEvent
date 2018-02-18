@@ -30,7 +30,11 @@ define(['./module'], function (controllers) {
 		
 		$location.hash($routeParams.section);
 		$anchorScroll();
-		$("#preloader").hide();
+		angular.element(document).ready(function() {
+			dTable = $('.datatable');
+			dTable.DataTable();
+			$("#preloader").hide();
+		});
 		return {
 			$scope:$scope,
 			$location:$location,

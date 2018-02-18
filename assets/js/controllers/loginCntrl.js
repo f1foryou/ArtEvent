@@ -19,7 +19,11 @@ define(['./module'], function (controllers) {
 				$scope.myWelcome = response.data;
 			});
 		};
-		$("#preloader").hide();
+		angular.element(document).ready(function() {
+			dTable = $('.datatable');
+			dTable.DataTable();
+			$("#preloader").hide();
+		});
 		return $scope;
 	}]);
 });

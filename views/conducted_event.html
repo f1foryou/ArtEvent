@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="assets/css/table.css">
 <style type="text/css">
 	.item{
 		display: block;
@@ -21,6 +22,9 @@
 	.img-responsive{
 		width: 100%;
 	}
+	.col-sm-12{
+		padding: 0px;
+	}
 </style>
 <div class="container">
 	<div class="row">
@@ -28,13 +32,13 @@
 			<div class="row">
 				<div class="col" align="center">
 					<div class="profile-userpic">
-						<img src="assets/images/400x400.png" class="img-responsive" alt="">
+						<img ng-src="assets/images/{{eventDetails.image}}" class="img-responsive" alt="">
 					</div>
 					<!-- END SIDEBAR USERPIC -->
 					<!-- SIDEBAR USER TITLE -->
 					<div class="profile-usertitle">
 						<div class="profile-usertitle-name">
-							<h1>Event Name</h1>
+							<h1>{{eventDetails.name}}</h1>
 						</div>
 					</div>
 				</div>
@@ -79,19 +83,26 @@
 							<div class="col-md-4">
 								<div class="well dash-box">
 									<h4>Users Registerd</h4>
-									<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 12</h2>
+									<h2>
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{eventDetails.users_registerd}}
+									</h2>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="well dash-box">
 									<h4>Image Uploaded</h4>
-									<h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 25</h2>
+									<h2>
+										<span class="glyphicon glyphicon-picture" aria-hidden="true"></span> {{eventDetails.images_uploaded}}
+									</h2>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="well dash-box">
 									<h4>Total Likes</h4>
-									<h2><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>126</h2>
+									<h2>
+										<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+										{{eventDetails.total_likes}}
+									</h2>
 								</div>
 							</div>
 						</div>
@@ -102,25 +113,23 @@
 						<div class="panel-heading" style="background-color: #c1c1c1;">
 							<h2 class="panel-title">Users</h2>
 						</div>
-						<div class="panel-body">
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Users Registerd</h4>
-									<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 12</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Image Uploaded</h4>
-									<h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 25</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Total Likes</h4>
-									<h2><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>126</h2>
-								</div>
-							</div>
+						<div class="panel-body nopadding">
+							<table id="example" class="datatable table table-striped table-bordered" cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Contact Number</th>
+										<th>Mail-id</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="user in eventDetails.users">
+										<td data-label="Name">{{user.name}}</td>
+										<td data-label="Contact Number">{{user.phone}}</td>
+										<td data-label="Mail-id">{{user.mail_id}}</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -129,25 +138,41 @@
 						<div class="panel-heading" style="background-color: #c1c1c1;">
 							<h2 class="panel-title">Post</h2>
 						</div>
-						<div class="panel-body">
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Users Registerd</h4>
-									<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 12</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Image Uploaded</h4>
-									<h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 25</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Total Likes</h4>
-									<h2><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>126</h2>
-								</div>
-							</div>
+						<div class="panel-body nopadding">
+							<table id="example" class="datatable table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Theme</th>
+										<th>Desc</th>
+										<th>Uploaded By</th>
+										<th>Date</th>
+										<th>Likes</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="image in eventDetails.images">
+										<td data-label="Image">
+											<img ng-src="assets/images/{{image.image}}" style="width: 50%">
+										</td>
+										<td data-label="Theme">
+											{{image.theme}}
+										</td>
+										<td data-label="Desc">
+											{{image.desc}}
+										</td>
+										<td data-label="Uploaded By">
+											{{image.upload_by}}
+										</td>
+										<td data-label="Date">
+											{{image.uploaded_date}}
+										</td>
+										<td data-label="Likes">
+											{{image.liked}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -156,25 +181,29 @@
 						<div class="panel-heading" style="background-color: #c1c1c1;">
 							<h2 class="panel-title">User Likes</h2>
 						</div>
-						<div class="panel-body">
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Users Registerd</h4>
-									<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 12</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Image Uploaded</h4>
-									<h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 25</h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="well dash-box">
-									<h4>Total Likes</h4>
-									<h2><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>126</h2>
-								</div>
-							</div>
+						<div class="panel-body nopadding">
+							<table id="example" class="datatable table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Name</th>
+										<th>Like Time</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="user_like in eventDetails.user_likes">
+										<td scope="row" data-label="Image">
+											<img ng-src="assets/images/{{user_like.image}}" style="width: 15%">
+										</td>
+										<td data-label="Name">
+											{{user_like.name}}
+										</td>
+										<td data-label="Like Time">
+											{{user_like.like_time}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

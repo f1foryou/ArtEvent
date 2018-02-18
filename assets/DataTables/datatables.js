@@ -15270,7 +15270,7 @@
 (function( factory ){
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['jquery', 'datatables'], function ( $ ) {
+		define( ['jquery', 'datatables.net'], function ( $ ) {
 			return factory( $, window, document );
 		} );
 	}
@@ -15285,7 +15285,7 @@
 				// Require DataTables, which attaches to jQuery, including
 				// jQuery if needed and have a $ property so we can access the
 				// jQuery object that is used
-				$ = require('datatables')(root, $).$;
+				$ = require('datatables.net')(root, $).$;
 			}
 
 			return factory( $, root, root.document );

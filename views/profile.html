@@ -50,7 +50,7 @@
 		<div class="col-sm-9">
 			<div class="profile-content">
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="ongoing">
+					<div role="tabpanel" class="tab-pane fade in active" id="ongoing">
 						<div class="row">
 							<div class="col-xs-12 col-sm-3" ng-repeat="event in ongoingEvents">
 								<a class="card" ng-href="#!/event/{{event.id}}">
@@ -74,7 +74,7 @@
 							</div>
 						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="participated">
+					<div role="tabpanel" class="tab-pane fade in" id="participated">
 						<div class="row">
 							<div class="col-xs-12 col-sm-3" ng-repeat="event in participatedEvents">
 								<a class="card" ng-href="#!/event/{{event.id}}">
@@ -98,7 +98,7 @@
 							</div>
 						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="conducted">
+					<div role="tabpanel" class="tab-pane fade in" id="conducted">
 						<div class="row">
 							<div class="col-xs-12 col-sm-3" ng-repeat="event in conductedEvents">
 								<a class="card" ng-href="#!/conducted/{{event.id}}">

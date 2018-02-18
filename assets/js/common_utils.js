@@ -3,3 +3,6 @@ $(document).ready(function () {
 		$(".navbar-collapse").collapse('hide');
 	});
 });
+function makeDataTable(tableId,obj){
+
+}
