@@ -5,6 +5,7 @@ define(['./module'], function (controllers) {
 		$scope.upass=null;
 
 		$scope.loginDetails = function(data, event) {
+			$("#preloader").show();
 			$http({
 				method : "GET",
 				url : "controllers/usercontroller.php",
@@ -13,10 +14,13 @@ define(['./module'], function (controllers) {
 					upass:$scope.upass,
 					act:'login',
 				}
-			}).then(function mySuccess(response) {
-				$scope.myWelcome = response.data;
+			}).then(function mySucess(response) {
+				$scope.data = response.data;
+				console.log($scope.data);
 			}, function myError(response) {
-				$scope.myWelcome = response.data;
+				$scope.data = response.data;
+			}).finally(function(){
+				$("#preloader").hide();
 			});
 		};
 		angular.element(document).ready(function() {
