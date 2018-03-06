@@ -73,10 +73,6 @@ define(['jquery','angular','angular-route','bootstrap','datatables',
 				templateUrl: 'views/conducted_event.html',
 				controller : "conductedEventCntrl"
 			});
-			$routeProvider.when('/temp',{
-				templateUrl: 'views/temp.html',
-				controller : "tempCntrl"
-			});
 			$routeProvider.when('/:section',{
 				templateUrl: 'views/main.html',
 				controller : "mainCntrl"
