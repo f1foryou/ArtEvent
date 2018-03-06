@@ -65,9 +65,17 @@ define(['jquery','angular','angular-route','bootstrap','datatables',
 				templateUrl: 'views/gallery.html',
 				controller : "galleryCntrl"
 			});
+			$routeProvider.when('/leaderboard',{
+				templateUrl: 'views/leaderboard.html',
+				controller: "leaderCntrl"
+			});			
 			$routeProvider.when('/conducted/:id',{
 				templateUrl: 'views/conducted_event.html',
 				controller : "conductedEventCntrl"
+			});
+			$routeProvider.when('/temp',{
+				templateUrl: 'views/temp.html',
+				controller : "tempCntrl"
 			});
 			$routeProvider.when('/:section',{
 				templateUrl: 'views/main.html',

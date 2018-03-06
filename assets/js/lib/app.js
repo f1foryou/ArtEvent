@@ -9,6 +9,8 @@ define([
 	'../controllers/registerCntrl',
 	'../controllers/galleryCntrl',
 	'../controllers/conductedEventCntrl',
+	'../controllers/leaderCntrl',
+	'../controllers/tempCntrl',
 ], function (angular) {
 
 	return angular.module('app', [

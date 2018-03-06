@@ -1,0 +1,39 @@
+#example {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    display: table;
+    margin-bottom: 0;
+    margin-top: 0;
+    border-color: grey;
+    -moz-box-sizing: border-box;
+    text-indent: 0;
+    background-color:transparent;
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+ 	border:1px solid #ddd;
+}
+
+th,td {
+	/*border: 1px solid black;*/
+	border-bottom: 1px solid #ddd;
+	padding: 8px;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #101010;
+    color: white;
+}
+
+img {
+  /*width: 100%;*/
+  display: block;
+}
